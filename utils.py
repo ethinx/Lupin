@@ -361,7 +361,7 @@ def generateTwitterIframe(TwitterUrl):
 def containsTWUrl(s):
     # url = re.search('((?:https?:)?//)?((?:www|m).)?((?:youtube.com|youtu.be))(/(?:[\\w-]+\\?v=|embed/|v/)?)([\\w-]+)(\\S+)?',s)
     # url = re.search('(?:http://)?(?:www.)?twitter.com/(?:(?:\\w)*#!/)?(?:pages/)?(?:[\\w-]*/)*([\\w-]*)',s)
-    url = re.search('((?:https?:)?//)?(?:www.)?twitter.com/(?:(?:\\w)*#!/)?(?:pages/)?(?:[\\w-]*/)*([\\w-]*)',s)
+    url = re.search('((?:https?:)?//)?(?:www.)?twitter.com/(?:(?:\\w)*#!/)?(?:pages/)?(?:[\\w-]*/)*([\\w-]*)(?:\?(?:\S+)*)?',s)
     if url:
         return url.group()
     else:
