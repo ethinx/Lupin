@@ -5,6 +5,7 @@ from pprint import pprint
 import config
 import utils
 import AgeEncHandler
+import twitter
 
 from dictionaries import git_messages
 import flashcards 
@@ -108,7 +109,8 @@ def buildJournalEntry(entry, ignoreURL):
         else:
             journalEntryURL = utils.containsTWUrl(entry)
             if(journalEntryURL):
-                journalEntry = utils.generateTwitterIframe(journalEntryURL)
+                # journalEntry = utils.generateTwitterIframe(journalEntryURL)
+                journalEntry = twitter.LogTwitterUrl(journalEntryURL)
             else:
                 journalEntryURL = utils.containsURL(entry)
                 if(journalEntryURL):
