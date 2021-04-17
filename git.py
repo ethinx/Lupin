@@ -110,7 +110,8 @@ def buildJournalEntry(entry, ignoreURL):
             journalEntryURL = utils.containsTWUrl(entry)
             if(journalEntryURL):
                 # journalEntry = utils.generateTwitterIframe(journalEntryURL)
-                journalEntry = twitter.LogTwitterUrl(journalEntryURL)
+                tweetString =  twitter.LogTwitterUrl(journalEntryURL)
+                journalEntry = journalEntry.replace(journalEntryURL, tweetString)
             else:
                 journalEntryURL = utils.containsURL(entry)
                 if(journalEntryURL):

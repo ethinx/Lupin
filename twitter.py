@@ -23,7 +23,7 @@ def LogTwitterUrl(url):
 
     logseqEntry = "[{}]({}) - [[@{}]]".format(tweet, url, user)
 
-    print(logseqEntry)
+    # print(logseqEntry)
     return logseqEntry
 
 
