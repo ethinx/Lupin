@@ -24,6 +24,7 @@ def LogTwitterUrl(url):
     logseqEntry = "[{}]({}) - [[@{}]]".format(tweet, url, user)
 
     print(logseqEntry)
+    return logseqEntry
 
 
 if __name__ == '__main__':
