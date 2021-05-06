@@ -21,7 +21,7 @@ def LogTwitterUrl(url):
     if regexUser:
         user = regexUser.group(1)
 
-    logseqEntry = "[{}]({}) - [[@{}]]".format(tweet, url, user)
+    logseqEntry = "[{}]({}) - [[@{}]] [[fav-tweets]]".format(tweet, url, user)
 
     # print(logseqEntry)
     return logseqEntry
