@@ -53,7 +53,7 @@ def updateJournal(entry, needsBuilding=True, path=None, overwrite=False, alias='
                     data =  (AgeEncHandler.ageDecrypt(data))
 
         
-        data += (entry).strip() + "\n"
+        data += "\n" + (entry).strip() + "\n"
 
         if(config.isGraphAgeEncrypted()):
             data = AgeEncHandler.ageEncrypt(data)
@@ -117,9 +117,10 @@ def buildJournalEntry(entry, ignoreURL):
                 if(journalEntryURL):
                     title = utils.getWebPageTitle(journalEntryURL)
                     if(config.journalsFilesExtension == '.md'):
-                        journalEntry = journalEntry.replace(journalEntryURL, '-' + config.BookmarkTag + ' [' + title + '](' + journalEntryURL + ')')
+                        journalEntry = journalEntry.replace(journalEntryURL, '#' + config.BookmarkTag + ' [' + title + '](' + journalEntryURL + ')')
+                        journalEntry = 'TODO ' + journalEntry
                     elif(config.journalsFilesExtension == '.org'):
-                        journalEntry = journalEntry.replace(journalEntryURL, '-' + config.BookmarkTag + ' [[' + journalEntryURL + '][' + title + ']]')
+                        journalEntry = journalEntry.replace(journalEntryURL, '#' + config.BookmarkTag + ' [[' + journalEntryURL + '][' + title + ']]')
 
             
     print (journalEntry)
