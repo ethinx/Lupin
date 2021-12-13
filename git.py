@@ -118,7 +118,7 @@ def buildJournalEntry(entry, ignoreURL):
                     title = utils.getWebPageTitle(journalEntryURL)
                     if(config.journalsFilesExtension == '.md'):
                         journalEntry = journalEntry.replace(journalEntryURL, '#' + config.BookmarkTag + ' [' + title + '](' + journalEntryURL + ')')
-                        journalEntry = 'TODO ' + journalEntry
+                        journalEntry = '- TODO ' + journalEntry
                     elif(config.journalsFilesExtension == '.org'):
                         journalEntry = journalEntry.replace(journalEntryURL, '#' + config.BookmarkTag + ' [[' + journalEntryURL + '][' + title + ']]')
 
